@@ -7,5 +7,17 @@
 </head>
 <body>
     hello docker
+    <script>
+        // http://apis.juhe.cn/rubbish/category?key=a9b8726b3d0aed4c3f0d8efec7f38239
+        const xhr = new XMLHttpRequest();
+        xhr.open('get','/api/rubbish/category?key=a9b8726b3d0aed4c3f0d8efec7f38239');
+        xhr.onreadystatechange = function() {
+            if(xhr.status == 200 && xhr.readyState == 4) {
+                document.write(xhr.responseText);
+            }
+        }
+        xhr.send();
+
+    </script>
 </body>
 </html>
